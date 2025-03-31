@@ -4,6 +4,7 @@ import {
   Heading,
   Text,
   TextInput,
+  TextArea
 } from "@marcos-vinicius-design-system/react";
 import dayjs from "dayjs";
 import { useRouter } from "next/router";
@@ -19,9 +20,7 @@ import { useSession } from "next-auth/react";
 const confirmFormSchema = z.object({
   name: z.string().min(3, { message: "O nome precisa no mínimo 3 caracteres" }),
   email: z.string().email({ message: "Digite um e-mail válido" }),
-  observations: z
-    .enum(["Banho e tosa", "Vacinas", "Ração", "Medicamentos"])
-    .default("Banho e tosa"),
+  observations: z.string().nullable()
 });
 
 type ConfirmFormData = z.infer<typeof confirmFormSchema>;
@@ -109,11 +108,7 @@ export function ConfirmStep({
 
           <label>
             <Text size="sm">Observações</Text>
-            <Select {...register("observations")} style={{ width: "100%" }}>
-              <option value="Check-up">Check-up</option>
-              <option value="Tratamento">Tratamento</option>
-              <option value="Implante">Implante</option>
-            </Select>
+           <TextArea placeholder="Observações" {...register("observations")} />
           </label>
 
           <FormActions>
