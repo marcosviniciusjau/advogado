@@ -6,7 +6,7 @@ export const Container = styled(Box, {
   display: 'grid',
   maxWidth: '100%',
   position: 'relative',
-
+  overflow: 'hidden',
   variants: {
     isTimePickerOpen: {
       true: {

@@ -49,7 +49,8 @@ export function buildNextAuthOptions(
             pass: env.NEXT_API_KEY,
           },
         },
-        from: `Advogado <no-reply-advogado@${env.NEXT_EMAIL_FROM}>`,
+        from: `Advogado <advogado-noreply@${env.NEXT_EMAIL_FROM}>`,
+
         sendVerificationRequest({
           identifier: email,
           url,
