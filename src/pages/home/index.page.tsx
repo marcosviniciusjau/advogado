@@ -57,8 +57,8 @@ export default function Home() {
         </Hero>
       </Container>
       <Do />
+      <About />
       <Contact />
-      <About/>
       <UserForm />
       <Footer />
     </>

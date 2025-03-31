@@ -8,19 +8,19 @@ import LogoInstagram from "@/assets/logo_instagram.svg";
 import { Text } from "@marcos-vinicius-design-system/react";
 
 import { Container, SocialMediaDiv, Imagem, Texto } from "./styles";
-
+import Image from "next/image";
 import {
   InstagramLogo,
   FacebookLogo,
   WhatsappLogo,
   Envelope,
 } from "phosphor-react";
-export function SocialMedia() {
+export function SocialMediaFooter() {
   return (
     <Container>
       <SocialMediaDiv>
         <Imagem>
-          <Envelope size={52} />
+          <Envelope size={25}/>
         </Imagem>
 
         <Texto>
@@ -29,13 +29,13 @@ export function SocialMedia() {
             style={{ textDecoration: "none" }}
             target="_parent"
           >
-            <Text size="xl">Advogado</Text>
+            <Text size="md">Advogado</Text>
           </a>
         </Texto>
       </SocialMediaDiv>
       <SocialMediaDiv>
         <Imagem>
-          <WhatsappLogo size={52} />
+          <WhatsappLogo size={25}/>
         </Imagem>
         <Texto>
           <a
@@ -43,13 +43,13 @@ export function SocialMedia() {
             style={{ textDecoration: "none" }}
             target="_parent"
           >
-            <Text size="xl">14 98207-8002</Text>
+            <Text size="md">14 98207-8002</Text>
           </a>
         </Texto>
       </SocialMediaDiv>
       <SocialMediaDiv>
         <Imagem>
-          <InstagramLogo size={52} />
+          <InstagramLogo size={25}/>
         </Imagem>
 
         <Texto>
@@ -58,13 +58,13 @@ export function SocialMedia() {
             style={{ textDecoration: "none" }}
             target="_parent"
           >
-            <Text size="xl">@advogado</Text>
+            <Text size="md">@advogado</Text>
           </a>
         </Texto>
       </SocialMediaDiv>
       <SocialMediaDiv>
         <Imagem>
-          <FacebookLogo size={52} />
+          <FacebookLogo size={25}/>
         </Imagem>
 
         <Texto>
@@ -73,7 +73,7 @@ export function SocialMedia() {
             style={{ textDecoration: "none" }}
             target="_parent"
           >
-            <Text size="xl">Advogado</Text>
+            <Text size="md">Advogado</Text>
           </a>
         </Texto>
       </SocialMediaDiv>

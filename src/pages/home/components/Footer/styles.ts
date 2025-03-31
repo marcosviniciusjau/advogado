@@ -1,16 +1,17 @@
 import { styled, Text } from '@marcos-vinicius-design-system/react'
+import Image from 'next/image'
 
 export const Container = styled('div', {
   display: 'grid',
-  gridTemplateAreas: "auto auto auto",
-  gridTemplateRows: "contact site address",
-  height: 100,
-  marginLeft: 'auto',
-  alignItems: 'center',
-  gap: '$20',
+  gridTemplateColumns: "1fr 1fr 1fr",
+  '@media(min-width: 48rem)': {
+    paddingLeft: '$10',
+  },
   overflow: 'hidden',
-
-  backgroundColor: '$gray800',
+  padding: '$10',
+  '@media(max-width: 48rem)': {
+    gap: '$10',
+  },
   [`> ${Text}`]: {
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -20,13 +21,14 @@ export const Container = styled('div', {
 })
 
 export const Contact = styled('div', {
-  griArea: 'contact',
+  width: 'initial',
+  //backgroundColor: '$gray100',
 })
 
 export const Site = styled('div', {
-  griArea: 'site',
+  marginTop: '-$10',
 })
 
 export const Address = styled('div', {
-  griArea: 'address',
+  // backgroundColor: '$gray400',
 })

@@ -2,21 +2,20 @@ import { Box, Button, Text, styled } from '@marcos-vinicius-design-system/react'
 import Image from 'next/image'
 
 export const Container = styled('div', {
-  maxWidth: 'calc(100vw - (100vw - 1160px) / 2)',
   display: 'grid',
   gap: '$20',
-  marginLeft: '$16',
-  marginRight: '$16',
-  gridTemplateColumns: '1fr 200px 1fr',
-  gridTemplateAreas: 'image vazio form',
+  paddingLeft: '$16',
+  paddingRight: '$16',
+  gridTemplateColumns: '2fr 1fr',
+  gridTemplateAreas: 'form form image',
   alignItems: 'center',
   overflow: 'hidden',
   '@media screen and (max-width: 48rem)': {
-    display: 'block',
-    marginLeft: '$10',
-    marginRight: '$6',
+    display: 'flex',
+    flexDirection: 'column-reverse',
   },
 })
+
 export const Vazio = styled('div', {
   griArea: 'vazio',
 })
@@ -32,6 +31,7 @@ export const Form = styled(Box, {
   display: 'flex',
   flexDirection: 'column',
   gap: '$6',
+  width: '70%',
   '@media screen and (max-width: 48rem)': {
     width: '95%'
   },

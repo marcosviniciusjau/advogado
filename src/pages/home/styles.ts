@@ -7,13 +7,13 @@ export const Container = styled('div', {
   gap: '$20',
   overflow: 'hidden',
   paddingBottom: '$10',
+  backgroundColor: '$gray800',
   '@media(min-width: 48rem)': {
     padding: '0 $10',
   },
   '@media screen and (max-width: 48rem)': {
     display: 'block',
     padding: '0',
-    marginLeft: '$2',
   },
 })
 export const HeadingTitle = styled(Heading, {
@@ -155,7 +155,6 @@ export const Questions = styled('div', {
 export const Gmail = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  gap: '$4',
 
   marginBottom: '$4',
   [`> ${Text}`]: {
@@ -167,11 +166,6 @@ export const Gmail = styled('div', {
 export const Whatsapp = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  gap: '$4',
-
-  marginTop: '$4',
-
-  marginBottom: '$4',
   [`> ${Text}`]: {
     marginTop: '$6',
     color: '$gray300',

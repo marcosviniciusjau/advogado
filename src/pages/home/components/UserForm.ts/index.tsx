@@ -41,16 +41,6 @@ export function UserForm() {
 
   return (
     <Container>
-      <Imagem>
-        <Image
-          src={agenda}
-          height={300}
-          quality={100}
-          alt="Imagem de wavebreakmedia_micro no Freepik"
-        />
-      </Imagem>
-      <Vazio></Vazio>
-
       <Form as="form" onSubmit={handleSubmit(handlePreRegister)}>
         <HeadingTitle>
           Agende agora mesmo
@@ -79,6 +69,15 @@ export function UserForm() {
           </Text>
         </FormAnnotation>
       </Form>
+
+      <Imagem>
+        <Image
+          src={agenda}
+          height={300}
+          quality={100}
+          alt="Imagem de wavebreakmedia_micro no Freepik"
+        />
+      </Imagem>
     </Container>
   );
 }

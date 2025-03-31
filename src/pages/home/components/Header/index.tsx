@@ -7,13 +7,13 @@ export function Header() {
   return (
     <HeaderContainer>
        <a href="/" style={{ textDecoration: "none" }}>
-        <Image src={Logo} alt="Logo" width={50} height={50} />
+        <Image src={Logo} alt="Logo" width={100} height={100} />
       </a>
       <HeaderText>
         <a href="/" style={{ textDecoration: "none" }}>
           <Text>Home </Text>
         </a>
-        <a href="/contact" style={{ textDecoration: "none" }}>
+        <a href="#contact-session" style={{ textDecoration: "none" }}>
           <Text>Contato </Text>
         </a>
         <a href="/sign-in" style={{ textDecoration: "none" }}>

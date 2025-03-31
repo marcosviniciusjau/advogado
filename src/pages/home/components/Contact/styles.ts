@@ -3,24 +3,17 @@ import Image from 'next/image'
 
 export const Container = styled('div', {
   display: 'flex',
-  alignItems: 'center',
-  gap: '$20',
   overflow: 'hidden',
-  paddingBottom: '$10',
-
-  backgroundColor: '$gray800',
-  '@media(min-width: 48rem)': {
-    padding: '0 $10',
-  },
+  alignItems: 'center',
+  backgroundColor: '$gray700',
   '@media screen and (max-width: 48rem)': {
-    display: 'block',
-    padding: '0',
+    display: 'grid',
+    paddingLeft: "$8",
   },
 })
 
 export const Hero = styled('div', {
-  padding: '0 $8',
-  paddingBottom: '$10',
+  paddingBottom: "$16",
   [`> ${Heading}`]: {
     '@media screen and (max-width: 48rem)': {
       fontSize: '$2xl',
@@ -28,29 +21,24 @@ export const Hero = styled('div', {
   },
 
   [`> ${Text}`]: {
-    marginTop: '$2',
     color: '$gray300',
   },
 })
 
 export const Imagem = styled(Image, {
-  width: "50%",
+  width: "80%",
   objectFit: "contain",
 
-  display: "block",
   borderRadius: "4px",
 
   '@media screen and (max-width: 48rem)': {
     padding: 0,
-    marginLeft: "$8",
   }
 })
 
 export const Preview = styled('div', {
   '@media(min-width: 48rem)': {
     marginLeft: '5vh',
-    width: '150%',
   },
   overflow: 'hidden',
-  paddingBottom: '$10',
 })
