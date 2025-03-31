@@ -24,7 +24,9 @@ export function Footer() {
         <Text>home</Text>
         <Text>sobre</Text>
         <Text>contato</Text>
+        <a href="/privacy" style={{textDecoration: 'none'}}>
         <Text>politica de privacidade</Text>
+        </a>
       </Site>
       <Address>
         <Text>Rua do Centro, 1235</Text>
