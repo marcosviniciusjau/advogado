@@ -163,7 +163,7 @@ style="background: ${color.mainBackground}; max-width: 48rem; margin: auto; bord
 <tr align="center"
 style="padding: 10px 0px; font-size: 22px; font-family: Helvetica, Arial, sans-serif; color: ${color.text};">
 <td>
-<img src="https://advogado-jade-xi.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.248d1717.png&w=64&q=75" alt="Logo Advogado"/>
+<img src="https://advogado-site.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.60beba83.png&w=128&q=75" alt="Logo Advogado"/>
 <h2>Advogado</h2>
 </td>
 </tr>
