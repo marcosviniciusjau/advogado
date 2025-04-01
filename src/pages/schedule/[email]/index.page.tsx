@@ -193,7 +193,7 @@ export default function Schedule({ user }: ScheduleProps) {
                         minute: "2-digit",
                       })}
                     </Text>
-                    <Text>Consulta:{scheduling.observations}</Text>
+                    <Text>Assessoria:{scheduling.observations}</Text>
                   </div>
                 ))
               ) : (
