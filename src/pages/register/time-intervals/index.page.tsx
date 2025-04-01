@@ -27,7 +27,6 @@ import { useSession } from "next-auth/react";
 import { ContainerLogin } from "@/pages/schedule/[email]/styles";
 
 import { Header as HeaderHome } from "@/pages/home/components/Header";
-import { parseCookies } from "nookies";
 import { env } from "@/env/env";
 const timeIntervalsFormSchema = z.object({
   intervals: z
@@ -194,13 +193,7 @@ export default function TimeIntervals() {
           <NextSeo title="Não autorizado | Advogado" noindex />
 
           <ContainerLogin>
-            <Heading>Você precisa fazer login para acessar essa página</Heading>
-            <a
-              href="/register/connect-calendar"
-              style={{ textDecoration: "none" }}
-            >
-              <Button>Fazer Login</Button>
-            </a>
+            <Heading>Você não está autorizado para acessar essa página</Heading>
           </ContainerLogin>
         </>
       )}
