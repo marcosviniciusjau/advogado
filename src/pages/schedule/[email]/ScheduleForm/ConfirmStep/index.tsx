@@ -47,7 +47,7 @@ export function ConfirmStep({
     defaultValues: {
       name: session.data?.user.name,
       email: session.data?.user.email,
-      observations,
+      observations:"",
     },
     resolver: zodResolver(confirmFormSchema),
   });
