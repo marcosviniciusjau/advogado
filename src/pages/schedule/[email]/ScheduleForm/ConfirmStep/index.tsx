@@ -24,7 +24,6 @@ const confirmFormSchema = z.object({
 });
 
 type ConfirmFormData = z.infer<typeof confirmFormSchema>;
-
 interface ConfirmStepProps {
   schedulingDate: Date;
   onCancelConfirmation: () => void;
@@ -48,7 +47,7 @@ export function ConfirmStep({
     defaultValues: {
       name: session.data?.user.name,
       email: session.data?.user.email,
-      observations: "Banho e tosa",
+      observations,
     },
     resolver: zodResolver(confirmFormSchema),
   });
