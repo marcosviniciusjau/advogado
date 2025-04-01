@@ -1,10 +1,12 @@
 import { Box, Button, Heading, Text, styled } from '@marcos-vinicius-design-system/react'
 
+export const ContainerEmail = styled('div', {
+  overflow: 'hidden',
+})
+
 export const Container = styled('div', {
   maxWidth: 852,
   padding: '0 $4',
-  
-  overflow: 'hidden',
   '@media screen and (max-width: 48rem)': {
     padding: '0 $4',
   },

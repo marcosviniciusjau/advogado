@@ -14,6 +14,7 @@ import {
   DoctorHeader,
   PanelProfile,
   Panel,
+  ContainerEmail,
   ProfileHeader,
   UserHeader,
 } from "./styles";
@@ -60,7 +61,6 @@ export default function Schedule({ user }: ScheduleProps) {
   const session = useSession();
   const isSignedId = session.status === "authenticated";
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -128,8 +128,8 @@ export default function Schedule({ user }: ScheduleProps) {
   }
 
   return (
-    <>
-      <NextSeo title={`Agendar com ${"Advogado"}| Advogado`} />
+    <ContainerEmail>
+      <NextSeo title={`Agendar com ${user.name}| Advogado`} />
 
       <Header />
       {isSignedId ? (
@@ -179,12 +179,12 @@ export default function Schedule({ user }: ScheduleProps) {
               </PanelProfile>
             </div>
             <Consultas key={session.data.user?.name}>
-              <Heading>Suas consultas:</Heading>
+              <Heading>Suas assessorias:</Heading>
               {schedulings && schedulings.length > 0 ? (
                 schedulings.map((scheduling) => (
                   <div key={scheduling.id}>
                     <Text>
-                      Data da consulta:{" "}
+                      Data da assessoria:{" "}
                       {new Date(scheduling.date).toLocaleDateString("pt-BR", {
                         day: "2-digit",
                         month: "2-digit",
@@ -202,7 +202,7 @@ export default function Schedule({ user }: ScheduleProps) {
             </Consultas>
             <DoctorHeader>
               <ProfilePhoto src={user.profileImgUrl} />
-              <Heading>Advogado</Heading>
+              <Heading>{user.name}</Heading>
               <Text>{user.bio}</Text>
               <Text>{user.email}</Text>
             </DoctorHeader>
@@ -213,7 +213,7 @@ export default function Schedule({ user }: ScheduleProps) {
 
             {[
               {
-                question: "Qual o preço médio da assessoria?",
+                question: "Qual o preço médio das assessorias?",
                 answer: "A partir de 150",
               },
               {
@@ -221,7 +221,7 @@ export default function Schedule({ user }: ScheduleProps) {
                 answer: "De segunda a sexta, das 8h às 18h.",
               },
               {
-                question: "Posso cancelar a assessoria?",
+                question: "Posso cancelar minha assessoria?",
                 answer: "Sim, com até 24h de antecedência.",
               },
             ].map((item, index) => (
@@ -253,7 +253,7 @@ export default function Schedule({ user }: ScheduleProps) {
       )}
 
       <ToastContainer />
-    </>
+    </ContainerEmail>
   );
 }
 
