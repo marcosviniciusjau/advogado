@@ -37,7 +37,7 @@ export const UserHeader = styled('div', {
   '@media(min-width: 48rem)': {
     marginTop: '$5',
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr 12.5rem',
+    gridTemplateColumns: '1fr 1fr 1fr',
     gridTemplateAreas: `'agendamentos doctor profile'`,
     gap: '19rem',
     alignItems: 'start',
@@ -61,6 +61,7 @@ export const DoctorHeader = styled('div', {
 });
 
 export const ProfileHeader = styled('div', {
+  gridArea: 'profile',
   display: 'flex',
   flexDirection: 'column',
   cursor: 'pointer',
@@ -71,6 +72,7 @@ export const ProfileHeader = styled('div', {
   },
 
 });
+
 export const PanelProfile = styled('div', {
   overflow: 'hidden',
   height: 0,
@@ -84,7 +86,7 @@ export const PanelProfile = styled('div', {
         '@media screen and (max-width: 768px)': {
           marginLeft: '$6',
         },
-        width: '100%',
+        maxWidth: '85%',
         height: 'auto',
       },
     },
@@ -145,7 +147,7 @@ export const Consultas = styled('div', {
 
 export const AccordionWrapper = styled('div', {
   marginTop: '$10',
-  marginLeft: '$8',
+  marginLeft: '$4',
   '@media screen and (max-width: 48rem)': {
     width: '80%',
     marginBottom: '$10',
