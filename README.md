@@ -1,12 +1,12 @@
 # Advogado
 
-Advogado is a dentist website where patients can select their preferred date and time for appointments with just a few clicks.
+Advogado is a lawyers website where customers can select their preferred date and time for appointments with just a few clicks.
 
 # Features
 
 Easy Appointment Scheduling: Patients can select their preferred date and time for appointments with just a few clicks.
-Google Calendar Integration: Dentists can manage their appointments directly through Google Calendar.
-Teleconsultation: Automatically schedule Google Meet sessions for virtual consultations.
+Google Calendar Integration: Lawyers can manage their appointments directly through Google Calendar.
+Teleconsultation: Automatically schedule Google Meet sessions for virtual appointments.
 Responsive Design: Accessible on both desktop and mobile devices.
 Login with NextAuth using Prisma Adapter for the doctor with Google and for the pacients using email verification links sending by resend
 
