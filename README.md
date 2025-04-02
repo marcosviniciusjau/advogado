@@ -24,7 +24,6 @@ Resend
 # Backend:
 
 Node.js
-Express
 Axios
 
 # Database:
@@ -51,4 +50,4 @@ Day.js
 
 # Here is a video demostration on mobile:
 
-https://github.com/user-attachments/assets/5d89abc5-fb6b-490e-9995-3fa8f9369184
+https://github.com/user-attachments/assets/5794f155-141a-42a7-a381-53ea349bd612
