@@ -12,7 +12,6 @@ dayjs.extend(timezone);
 
 export async function sendEventEmail(identifier: string, schedulingDate: string) {
   try {
-    console.log("chegou aqui vercel?", identifier, schedulingDate)
     const schedulingDateUTC = dayjs.utc(schedulingDate)
     .tz(dayjs.tz.guess())
     .startOf('hour')
@@ -25,7 +24,6 @@ export async function sendEventEmail(identifier: string, schedulingDate: string)
       scheduledAt: schedulingDateBefore,
       html: htmlBefore(schedulingDate),
     })
- console.log("agendou pra enviar?", emailResponseBefore)
     const emailResponseInTime = await resend.emails.send({
       to: identifier,
       from: `Advogado <info-advogado@${env.NEXT_EMAIL_FROM}>`,
@@ -34,7 +32,6 @@ export async function sendEventEmail(identifier: string, schedulingDate: string)
       scheduledAt: schedulingDateUTC.format(),
       html: htmlInTime(schedulingDate),
     })
- console.log('enviou?', emailResponseInTime)
     if (emailResponseBefore.error) {
       throw new AppError(`Erro ao enviar email: ${emailResponseBefore.error.message}`, 400);
     }
