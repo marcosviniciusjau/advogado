@@ -26,6 +26,8 @@ import { Footer } from "./components/Footer";
 import { useState } from "react";
 import { Contact } from "./components/Contact";
 import { About } from "./components/About";
+import { useEffect } from "react";
+
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 

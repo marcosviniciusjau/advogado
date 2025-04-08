@@ -12,8 +12,10 @@ dayjs.extend(timezone);
 
 export async function sendEventEmail(identifier: string, schedulingDate: string) {
   try {
-    const schedulingDateBefore = dayjs.utc(schedulingDate).tz(dayjs.tz.guess()).subtract(30, 'minutes').format()
-    const schedulingDateFormat = dayjs.utc(schedulingDate).tz(dayjs.tz.guess())
+    const schedulingDateUTC = dayjs.utc(schedulingDate)
+    .tz(dayjs.tz.guess())
+    .startOf('hour')
+    const schedulingDateBefore = schedulingDateUTC.subtract(30, 'minutes').format()
     const emailResponseBefore = await resend.emails.send({
       to: identifier,
       from: `Advogado <info-advogado@${env.NEXT_EMAIL_FROM}>`,
@@ -28,7 +30,7 @@ export async function sendEventEmail(identifier: string, schedulingDate: string)
       from: `Advogado <info-advogado@${env.NEXT_EMAIL_FROM}>`,
       subject: `Lembrete da assessoria - Advogado`,
       text: text(),
-      scheduledAt: schedulingDateFormat.toString(),
+      scheduledAt: schedulingDateUTC.format(),
       html: htmlInTime(schedulingDate),
     })
 
